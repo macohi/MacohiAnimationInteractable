@@ -19,6 +19,8 @@ class InitState extends MState
 	public static var NEWGROUNDS:NGio;
 	#end
 
+	public static var save:MAISave = new MAISave();
+
 	override public function create()
 	{
 		super.create();
@@ -55,7 +57,7 @@ class InitState extends MState
 		}
 
 		#if (ENABLE_NEWGROUNDS && newgrounds)
-		// NEWGROUNDS = new NGio(apistuff[0], apistuff[1]);
+		NEWGROUNDS = new NGio(apistuff[0], apistuff[1]);
 		#end
 
 		FlxG.switchState(AnimationSelect.new);
