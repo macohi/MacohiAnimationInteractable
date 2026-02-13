@@ -44,9 +44,9 @@ class AnimationSelect extends OptionsMenuState
 	{
 		super.update(elapsed);
 
-		valueText.text = '${this.itemList[currentSelection]}';
+		valueText.text = 'Animation: ${this.itemList[currentSelection]}';
 		if (this.itemListValues.get(this.itemList[currentSelection]) != null)
-			valueText.text += '\n${this.itemListValues.get(this.itemList[currentSelection])}';
+			valueText.text += '\nDescription:${this.itemListValues.get(this.itemList[currentSelection])}';
 	}
 
 	override function controlsMoveVertical()
