@@ -37,6 +37,7 @@ class InitState extends MState
 
 		FlxG.plugins.addPlugin(new Cursor());
 		FlxG.plugins.addPlugin(new MedalPopup());
+		FlxG.plugins.drawOnTop = true;
 
 		MegaVars.VCR_LIBRARY = 'main';
 
