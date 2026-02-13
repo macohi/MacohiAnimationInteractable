@@ -54,8 +54,6 @@ class DislocateAShoulder extends MState
 		});
 
 		FlxG.sound.playMusic(AssetPaths.sound('DISLOCATE_A_SHOULDER_fixedvol'));
-
-		Cursor.cursorVisible = true;
 	}
 
 	public var interupt:Bool = false;
@@ -79,6 +77,11 @@ class DislocateAShoulder extends MState
 
 		if ((bg.anim.frameIndex >= 153 && bg.anim.frameIndex <= 181) && !interupt)
 		{
+			if (!Cursor.cursorVisible && !interupt)
+				Cursor.cursorVisible = true;
+			if (Cursor.cursorVisible && interupt)
+				Cursor.cursorVisible = false;
+
 			if (mouseOverlapsAurora() && !interupt)
 			{
 				villianAurora.brightness = 0.5;
@@ -86,6 +89,11 @@ class DislocateAShoulder extends MState
 				if (FlxG.mouse.justReleased && !interupt)
 					interupt = true;
 			}
+		}
+		else
+		{
+			if (Cursor.cursorVisible)
+				Cursor.cursorVisible = false;
 		}
 	}
 
