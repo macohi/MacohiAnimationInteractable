@@ -1,3 +1,4 @@
+import flixel.FlxSprite;
 import macohi.debugging.CrashHandler;
 import macohi.debugging.CustomTrace;
 import haxe.Log;
@@ -18,6 +19,8 @@ class InitState extends MState
 
 		AssetPaths.setCurrentLevel('main');
 		AssetPaths.soundExt = 'wav';
+
+		FlxSprite.defaultAntialiasing = true;
 
 		FlxG.switchState(DislocateAShoulder.new);
 	}
