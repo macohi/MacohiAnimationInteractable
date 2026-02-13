@@ -41,6 +41,8 @@ class AnimationSelect extends OptionsMenuState
 		super.create();
 
 		Cursor.cursorVisible = false;
+
+		MedalPopup.displayMedal(AssetPaths.image('dislocate_a_shoulder', 'medals'));
 	}
 
 	override function update(elapsed:Float)

@@ -24,5 +24,13 @@ class MedalPopup extends FlxBasic
 		FlxTween.tween(medal, {alpha: 0}, 0.5, {
 			startDelay: 1,
 		});
+
+		if (!FlxG.state.members.contains(medal))
+			FlxG.state.add(medal);
+		else
+		{
+			FlxG.state.remove(medal);
+			FlxG.state.add(medal); // stay at the front
+		}
 	}
 }

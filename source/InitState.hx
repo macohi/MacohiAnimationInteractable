@@ -35,6 +35,7 @@ class InitState extends MState
 		FlxSprite.defaultAntialiasing = true;
 
 		FlxG.plugins.addPlugin(new Cursor());
+		FlxG.plugins.addPlugin(new MedalPopup());
 
 		MegaVars.VCR_LIBRARY = 'main';
 
