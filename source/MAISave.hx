@@ -1,3 +1,4 @@
+import macohi.funkin.pre_vslice.NGio;
 import macohi.save.SaveField;
 import macohi.save.Save;
 
@@ -18,5 +19,18 @@ class MAISave extends Save
 		super.initFields();
 
 		medals = new SaveField<Array<String>>('medals', [], 'Medals');
+	}
+
+	public function addMedal(medal:String, ?ngID:Int = 0)
+	{
+		if (!medals.get().contains(medal))
+		{
+			medals.get().push(medal);
+
+			#if (ENABLE_NEWGROUNDS && newgrounds)
+			if (ngID != 0)
+				NGio.unlockMedal(ngID);
+			#end
+		}
 	}
 }
