@@ -49,10 +49,13 @@ class DislocateAShoulder extends MState
 		bg.anim.onFinish.add(function(a)
 		{
 			trace('Done');
+			FlxG.sound.music.stop();
 			FlxG.switchState(AnimationSelect.new);
 		});
 
-		FlxG.sound.play(AssetPaths.sound('DISLOCATE_A_SHOULDER_fixedvol'));
+		FlxG.sound.playMusic(AssetPaths.sound('DISLOCATE_A_SHOULDER_fixedvol'));
+
+		Cursor.cursorVisible = true;
 	}
 
 	public var interupt:Bool = false;
@@ -61,25 +64,40 @@ class DislocateAShoulder extends MState
 	{
 		super.update(elapsed);
 
+		if ((bg.anim.frameIndex == 181) && interupt)
+		{
+			trace('You saved him');
+			FlxG.sound.music.stop();
+
+			FlxG.switchState(AnimationSelect.new);
+		}
+
+		FlxG.watch.addQuick('mouseOverlapsAurora()', mouseOverlapsAurora());
+
+		if (villianAurora.brightness > 0)
+			villianAurora.brightness = 0;
+
 		if ((bg.anim.frameIndex >= 153 && bg.anim.frameIndex <= 181) && !interupt)
 		{
-			if (FlxG.mouse.overlaps(villianAurora) && !interupt)
+			if (mouseOverlapsAurora() && !interupt)
 			{
-				villianAurora.brightness = 0.25;
+				villianAurora.brightness = 0.5;
 
 				if (FlxG.mouse.justReleased && !interupt)
 					interupt = true;
 			}
-			else if (villianAurora.brightness > 0.0)
-				villianAurora.brightness = 0.0;
-
-			if (!interupt)
-			{
-				if (!Cursor.cursorVisible)
-					Cursor.cursorVisible = true;
-			}
-			else if (Cursor.cursorVisible)
-				Cursor.cursorVisible = false;
 		}
+	}
+
+	public function mouseOverlapsAurora():Bool
+	{
+		if ((bg.anim.frameIndex >= 153 && bg.anim.frameIndex <= 181))
+		{
+			if (FlxG.mouse.x < (FlxG.width / 4) * 1.25)
+				if (FlxG.mouse.y > (FlxG.height / 4) * 2)
+					return true;
+		}
+
+		return false;
 	}
 }
