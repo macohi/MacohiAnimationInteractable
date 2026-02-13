@@ -43,7 +43,7 @@ class AnimationSelect extends OptionsMenuState
 
 		Cursor.cursorVisible = false;
 
-		MedalPopup.displayMedal(AssetPaths.image('dislocate_a_shoulder', 'medals'));
+		// MedalPopup.displayMedal(AssetPaths.image('dislocate_a_shoulder', 'medals'));
 	}
 
 	override function update(elapsed:Float)

@@ -54,7 +54,7 @@ class InitState extends MState
 		}
 
 		#if (ENABLE_NEWGROUNDS && newgrounds)
-		NEWGROUNDS = new NGio(apistuff[0], apistuff[1]);
+		// NEWGROUNDS = new NGio(apistuff[0], apistuff[1]);
 		#end
 
 		FlxG.switchState(AnimationSelect.new);
