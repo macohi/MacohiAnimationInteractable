@@ -133,4 +133,18 @@ class DislocateAShoulder extends PauseMState
 
 		return false;
 	}
+
+	override function togglePaused()
+	{
+		super.togglePaused();
+
+		for (prop in [bg, ogAurora, ogNicom, heroNicom, villianAurora])
+		{
+			if (prop != null)
+				if (paused)
+					prop.anim.pause();
+				else
+					prop.anim.resume();
+		}
+	}
 }
