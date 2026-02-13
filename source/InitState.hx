@@ -1,3 +1,4 @@
+import macohi.funkin.koya.backend.plugins.Cursor;
 import macohi.funkin.MegaVars;
 import flixel.FlxSprite;
 import macohi.debugging.CrashHandler;
@@ -21,6 +22,8 @@ class InitState extends MState
 		AssetPaths.soundExt = 'wav';
 
 		FlxSprite.defaultAntialiasing = true;
+
+		FlxG.plugins.addPlugin(new Cursor());
 
 		MegaVars.VCR_LIBRARY = 'main';
 
