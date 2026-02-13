@@ -33,7 +33,7 @@
 	<source path="source" />
 	
 	<assets path="assets" />
-	<assets path="assets/medals/data/apistuff.txt" embed="true"/>
+	<assets path="art/apistuff.txt" rename="assets/medals/data/apistuff.txt" embed="true"/>
 	<assets path="source/macohi/assets" rename="assets"/>
 
 	<!-- _______________________________ Libraries ______________________________ -->
