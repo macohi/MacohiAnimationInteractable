@@ -1,3 +1,12 @@
-import macohi.funkin.koya.frontend.ui.menustate.MenuState;
+import macohi.funkin.koya.frontend.scenes.menustates.OptionsMenuState;
 
-class AnimationSelect extends MenuState {}
+class AnimationSelect extends OptionsMenuState
+{
+	override public function new()
+	{
+		super();
+		this.atlasText = false;
+
+		this.itemList = [];
+	}
+}
