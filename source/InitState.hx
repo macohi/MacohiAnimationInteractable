@@ -2,7 +2,6 @@ import flixel.FlxSprite;
 import macohi.debugging.CrashHandler;
 import macohi.debugging.CustomTrace;
 import haxe.Log;
-import anims.DislocateAShoulder;
 import macohi.funkin.koya.backend.AssetPaths;
 import flixel.FlxG;
 import macohi.overrides.MState;
@@ -22,7 +21,7 @@ class InitState extends MState
 
 		FlxSprite.defaultAntialiasing = true;
 
-		FlxG.switchState(DislocateAShoulder.new);
+		FlxG.switchState(AnimationSelect.new);
 	}
 
 	override public function update(elapsed:Float)

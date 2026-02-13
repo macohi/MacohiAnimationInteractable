@@ -46,7 +46,7 @@ class DislocateAShoulder extends MState
 
 		bg.anim.onFinish.add(function(a) {
 			trace('Done');
-			FlxG.resetState();
+			FlxG.switchState(AnimationSelect.new);
 		});
 
 		FlxG.sound.play(AssetPaths.sound('DISLOCATE_A_SHOULDER_fixedvol'));

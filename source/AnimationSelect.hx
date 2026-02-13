@@ -1,3 +1,4 @@
+import anims.DislocateAShoulder;
 import flixel.FlxG;
 import macohi.funkin.koya.frontend.scenes.menustates.OptionsMenuState;
 
@@ -13,7 +14,10 @@ class AnimationSelect extends OptionsMenuState
 	{
 		super.addItems();
 
-		addItem('Dislocate a Shoulder', 'Created 2/12/2026', function() {});
+		addItem('Dislocate a Shoulder', 'Created 2/12/2026', function()
+		{
+			FlxG.switchState(DislocateAShoulder.new);
+		});
 	}
 
 	override function update(elapsed:Float)
