@@ -20,6 +20,13 @@ class AnimationSelect extends OptionsMenuState
 		{
 			FlxG.switchState(DislocateAShoulder.new);
 		});
+
+		addItem('TIROK! SINCO! osin.', 'Created 2/13/2026', function()
+		{
+			transitioning = false;
+			trace('no');
+			// FlxG.switchState(DislocateAShoulder.new);
+		});
 	}
 
 	override function create()
