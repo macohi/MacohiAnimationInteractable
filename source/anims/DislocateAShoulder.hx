@@ -19,8 +19,6 @@ class DislocateAShoulder extends PauseMState
 
 	override function create()
 	{
-		super.create();
-
 		AssetPaths.setCurrentLevel('dislocate_a_shoulder');
 
 		bg.frames = AssetPaths.getAnimateAtlas('bg');
@@ -55,6 +53,8 @@ class DislocateAShoulder extends PauseMState
 		});
 
 		FlxG.sound.playMusic(AssetPaths.sound('DISLOCATE_A_SHOULDER_fixedvol'));
+		
+		super.create();
 	}
 
 	public var interupt:Bool = false;
