@@ -1,3 +1,5 @@
+import macohi.backend.WeirdWebAssets;
+import flixel.system.debug.log.LogStyle;
 import macohi.objects.MedalPopup;
 import macohi.funkin.pre_vslice.NGio;
 import macohi.util.StringUtil;
@@ -61,6 +63,8 @@ class InitState extends MState
 		#if (ENABLE_NEWGROUNDS && newgrounds)
 		NEWGROUNDS = new NGio(apistuff[0], apistuff[1]);
 		#end
+
+		WeirdWebAssets.fixThem();
 
 		FlxG.switchState(AnimationSelect.new);
 	}
