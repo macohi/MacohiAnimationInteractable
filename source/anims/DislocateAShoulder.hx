@@ -101,7 +101,7 @@ class DislocateAShoulder extends PauseMState
 			ogNicom.setPosition(242.7, 471.35,);
 
 			FlxG.sound.play(AssetPaths.sound('weirdRoute', 'main'));
-			FlxTimer.wait(1.0, function()
+			FlxTimer.wait(0.6, function()
 			{
 				bg.anim.onFinish.dispatch('none');
 			});
