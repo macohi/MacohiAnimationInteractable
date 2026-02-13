@@ -29,8 +29,8 @@ class DislocateAShoulder extends MState
 		heroNicom.frames = AssetPaths.getAnimateAtlas('heroNicom');
 
 		ogNicom.setPosition(
-			-95.95,
-			103.35
+			-150.15,
+			-180
 		);
 		villianAurora.setPosition(
 			-235.4,

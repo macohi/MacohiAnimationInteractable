@@ -23,10 +23,19 @@ class InitState extends MState
 		FlxSprite.defaultAntialiasing = true;
 
 		MegaVars.VCR_LIBRARY = 'main';
-		
+
 		MegaVars.SOUND_MENU_BACK = '';
 		MegaVars.SOUND_MENU_CONFIRM = '';
 		MegaVars.SOUND_MENU_SCROLL = '';
+
+		MegaVars.KOYA_MENUBG_PINK = function(lib)
+		{
+			return '';
+		}
+		MegaVars.KOYA_MENUBG_DESAT = function(lib)
+		{
+			return '';
+		}
 
 		FlxG.switchState(AnimationSelect.new);
 	}
