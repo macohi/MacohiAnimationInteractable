@@ -12,5 +12,6 @@ class Main extends Sprite
 		addChild(new FlxGame(0, 0, PlayState));
 
 		AssetPaths.setCurrentLevel('main');
+		AssetPaths.soundExt = 'wav';
 	}
 }
