@@ -1,13 +1,13 @@
 package anims;
 
+import macohi.backend.PauseMState;
 import flixel.util.FlxTimer;
 import macohi.funkin.koya.backend.plugins.Cursor;
 import flixel.FlxG;
 import macohi.funkin.koya.backend.AssetPaths;
 import macohi.overrides.MSprite;
-import macohi.overrides.MState;
 
-class DislocateAShoulder extends MState
+class DislocateAShoulder extends PauseMState
 {
 	public var bg:MSprite = new MSprite();
 
