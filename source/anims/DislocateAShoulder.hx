@@ -138,6 +138,10 @@ class DislocateAShoulder extends PauseMState
 	{
 		super.togglePaused();
 
+		if (paused)
+			FlxG.sound.music.pause();
+		else
+			FlxG.sound.music.resume();
 		for (prop in [bg, ogAurora, ogNicom, heroNicom, villianAurora])
 		{
 			if (prop != null)
