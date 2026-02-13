@@ -1,12 +1,12 @@
 ﻿{"ATLAS": {"SPRITES":[ 
-{"SPRITE" : {"name": "0000","x":4,"y":4,"w":697,"h":521,"rotated": false}}
+{"SPRITE" : {"name": "0000","x":4,"y":4,"w":1282,"h":723,"rotated": false}}
 ]},
 "meta": {
 "app": "Adobe Animate",
 "version": "21.0.0.35450",
 "image": "spritemap1.png",
 "format": "RGBA8888",
-"size": {"w":705,"h":529},
+"size": {"w":1290,"h":731},
 "resolution": "1"
 }
 }

@@ -28,6 +28,24 @@ class DislocateAShoulder extends MState
 		villianAurora.frames = AssetPaths.getAnimateAtlas('villianAurora');
 		heroNicom.frames = AssetPaths.getAnimateAtlas('heroNicom');
 
+		ogNicom.setPosition(
+			-95.95,
+			103.35
+		);
+		villianAurora.setPosition(
+			-235.4,
+			-184.9
+		);
+
+		ogAurora.setPosition(
+			378.6,
+			476.85
+		);
+		heroNicom.setPosition(
+			797.85,
+			398.4
+		);
+
 		for (prop in [bg, ogAurora, heroNicom, villianAurora, ogNicom])
 		{
 			prop.addFrameLabelAnim('main', 'main', 24, false);
@@ -36,13 +54,8 @@ class DislocateAShoulder extends MState
 			add(prop);
 		}
 
+		bg.scale.set(2, 2);
 		bg.screenCenter();
-
-		ogNicom.setPositionBasedOnDimensions(-127.95, -163.75, 640, 480);
-		villianAurora.setPositionBasedOnDimensions(-291.9, -452, 640, 480);
-
-		ogAurora.setPositionBasedOnDimensions(121.25, 209.7, 640, 480);
-		heroNicom.setPositionBasedOnDimensions(369, 131.25, 640, 480);
 
 		bg.anim.onFinish.add(function(a)
 		{
